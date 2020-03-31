@@ -1,5 +1,5 @@
 import speech_recognition as sr
-from playaudio import *
+from playsounds import *
 
 #this module converts speech2text
 
@@ -27,7 +27,7 @@ def startStt(lang='en-in'):
         speech="Sorry! Couldn't understand"
         print("Sorry! Couldn't understand")
         return speech
-    except sr.RequestError as e:
+    except sr.RequestError:
         print("Could not process request")
         speech="Could not process request"
         return speech

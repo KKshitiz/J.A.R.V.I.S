@@ -23,5 +23,5 @@ def startTts(text):
     engine.runAndWait()
 
 if __name__ == "__main__":
-    setupTts(180,1.0)
-    startTts("this is a demo of text to speech")
+    setupTts(170,1.0)
+    startTts("You are not authorized to access this area!")
