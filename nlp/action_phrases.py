@@ -23,8 +23,8 @@ affirmative_r=["yes sir","doing it for you","working on it","i am on it, sir","o
 negative_r=["sorry sir! i have not been programmed to do so","i am unable to do it, sir"]
 
 #standby check
-check_i=["are you awake?","are you there?","are you dead","are you alive yet","are you alive","daddy's home","wake up","wake up, daddy's home"]
-check_r=["at your service, sir","i'm here, sir","i am feeding on electricity already","consuming memory, sir","welcome home, sir"]
+check_i=["are you awake?","are you up?","are you there?","are you dead","are you alive yet","are you alive","daddy's home","wake up","wake up, daddy's home"]
+check_r=["at your service, sir","i'm here, sir","for you sir, always","i am feeding on electricity already","consuming memory, sir","welcome home, sir"]
 
 #greet
 greet_i=["hey","hi","yo","howdy","hola","hello","helloo"]
@@ -53,3 +53,8 @@ battery_i=["check battery health","check battery","battery status","power status
 ram_i=["check virtual memory","ram usage","check ram usage","memory usage","check memory usage"]
 cpu_i=["check cpu usage","check cpu health","cpu usage"]
 cpu_r=["would you like to know usage for all cpu cores?","Sir, shall enumerate the usages of all the cores"]
+
+#to take notes
+notes_i=["make a note", "write this down", "remember this", "type this"]
+notes_r=["what would you like to write"]
+notes_i=["noted","i've made a note of it"]

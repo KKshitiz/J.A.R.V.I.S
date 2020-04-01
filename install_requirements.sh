@@ -1,0 +1,14 @@
+pip install pyaudio
+pip install wave
+pip install SpeechRecognition
+pip install pyttsx3
+pip install pyowm
+pip install pyjokes
+pip install datetime
+pip install opencv-python
+pip install pyautogui
+pip install numpy
+pip install psutil
+pip install googletrans
+pip install webbrowser
+pip install wolframalpha

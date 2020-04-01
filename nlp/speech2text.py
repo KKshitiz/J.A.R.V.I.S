@@ -11,9 +11,10 @@ def startStt(lang='en-in'):
 
     with sr.Microphone() as source:
         print("Say something")
+        
         r.pause_threshold=1      #Represents the minimum length of silence (in seconds) that will register as the end of a phrase
-
-        r.adjust_for_ambient_noise(source,duration=0.2)
+        r.energy_threshold=300
+        r.adjust_for_ambient_noise(source,duration=0.6)
         audio=r.listen(source)
 
     endAudio()
@@ -22,7 +23,7 @@ def startStt(lang='en-in'):
     try:
         speech=r.recognize_google(audio,language=lang)
         print("Speech:",speech)
-        return speech
+        return speech.lower()
     except sr.UnknownValueError:
         speech="Sorry! Couldn't understand"
         print("Sorry! Couldn't understand")
