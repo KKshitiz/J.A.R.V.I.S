@@ -7,14 +7,13 @@ from playsounds import *
 def startStt(lang='en-in'):
     r=sr.Recognizer()
     print("Listening")
-    startAudio()
+    # startAudio()
 
     with sr.Microphone() as source:
         print("Say something")
-        
-        r.pause_threshold=1      #Represents the minimum length of silence (in seconds) that will register as the end of a phrase
-        r.energy_threshold=300
-        r.adjust_for_ambient_noise(source,duration=0.6)
+        # r.pause_threshold=1      #Represents the minimum length of silence (in seconds) that will register as the end of a phrase
+        # r.energy_threshold=300
+        # r.adjust_for_ambient_noise(source,duration=0.6)
         audio=r.listen(source)
 
     endAudio()
@@ -23,15 +22,13 @@ def startStt(lang='en-in'):
     try:
         speech=r.recognize_google(audio,language=lang)
         print("Speech:",speech)
-        return speech.lower()
     except sr.UnknownValueError:
         speech="Sorry! Couldn't understand"
         print("Sorry! Couldn't understand")
-        return speech
     except sr.RequestError:
         print("Could not process request")
         speech="Could not process request"
-        return speech
+    return speech.lower()
 
 if __name__ == "__main__":
     startStt()

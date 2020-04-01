@@ -53,10 +53,17 @@ def get_events(n, service):
         print(e)
         return e
 
-
-service = authenticate_google()
+try:
+    service = authenticate_google()
+except:
+    s="Authentication failed from google servers."
+    
 def startCalendar(n):
-    return get_events(n,service)
+    try:
+        s=get_events(n,service)
+    except:
+        s= "Failed to get calendar data."
+    return s
 
 if __name__ == "__main__":
     startCalendar(2)
