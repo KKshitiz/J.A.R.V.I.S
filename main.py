@@ -5,10 +5,11 @@ from playsounds import startPlayAudio
 from text2speech import setupTts,startTts
 from speech2text import startStt
 sys.path.insert(1,'C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\utility')
-import miscutils
+from miscutils import *
 import sysutils
 import googlecalendar
 import random
+from playmusic import *
 
 #some variables
 WAKE_CMD=wakeup
@@ -42,8 +43,39 @@ def init():
 
 #function to match commands
 def matchCommand(CMD):
+
     if CMD in check_i:
+        #to check if jarvis is on and working
         startTts(randomize(check_r))
+
+    elif CMD in greet_i:
+        #greetings like hello,hi
+        startTts(randomize(greet_r))
+
+    elif CMD in playmusic_i:
+        # to play music
+        startTts(randomize(playmusic_r))
+        startPlaymusic()
+
+    elif CMD in notes_i:
+        #to take notes
+        startTts(randomize(notes_r))
+        notes=startStt()
+        startNotes(notes)
+        startTts(randomize(notes_r2))
+    
+    elif CMD in weather_i:
+        #to check weather
+        startTts(randomize(weather_r))
+        city=startTts()
+        startTts(weather(city))
+
+    elif CMD in joke_i:
+        #to tell a joke
+        startTts(randomize(joke_r))
+        startTts(startJoke())
+
+    elif CMD in 
     return
 #function ends here
 
@@ -61,7 +93,6 @@ def startMain():
         wake=startStt()
         print(wake)
         if wake in WAKE_CMD:
-            startPlayAudio('jarvislistening.wav')
             CMD=startStt()
             matchCommand(CMD)
             

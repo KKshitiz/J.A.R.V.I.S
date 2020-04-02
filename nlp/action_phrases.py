@@ -58,4 +58,9 @@ cpu_r=["would you like to know usage for all cpu cores ","Sir, shall enumerate t
 #to take notes
 notes_i=["make a note", "write this down", "remember this", "type this"]
 notes_r=["what would you like to write"]
-notes_i=["noted","i've made a note of it"]
+notes_r2=["noted","i've made a note of it"]
+
+#to check weather
+weather_i=["check weather","what's the weather","how's the sky"]
+weather_r=["which city would you like to check?"]
+#to exit jarvis

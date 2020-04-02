@@ -8,7 +8,7 @@ def startStt(lang='en-in'):
     r=sr.Recognizer()
     print("Listening")
     # startAudio()
-
+    startPlayAudio('jarvislistening.wav')
     with sr.Microphone() as source:
         print("Say something")
         # r.pause_threshold=1      #Represents the minimum length of silence (in seconds) that will register as the end of a phrase
@@ -16,7 +16,6 @@ def startStt(lang='en-in'):
         # r.adjust_for_ambient_noise(source,duration=0.6)
         audio=r.listen(source)
 
-    endAudio()
     speech=""
 
     try:

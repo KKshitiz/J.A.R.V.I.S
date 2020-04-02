@@ -1,6 +1,7 @@
 from pyowm import OWM
 from datetime import datetime
 import subprocess
+from pyjokes import get_joke
 asset_path="C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\assets\\notes\\"
 #tells the weather
 def weather(city):
@@ -12,12 +13,13 @@ def weather(city):
         # print(w.get_wind)
         status=str(w).rsplit(" ")[5]
     
-        weather_say+=str(w.get_temperature('celsius')['temp'])+" celsius with "+status[status.rfind("=")+1:-1]
+        weather_say+=str(w.get_temperature('celsius')['temp'])+" celsius and the sky is "+status[status.rfind("=")+1:-1]
         weather_say+=". The average wind speed is "+str(w.get_wind()['speed'])+" kilometres per hour"
         weather_say+=" and the humidity is "+str(w.get_humidity())+" percent."
     except:
         weather_say+="unavailable."
     return weather_say
+    
 
 #initiate greeting sequence
 def greet():
@@ -42,3 +44,7 @@ def startNotes(text):
     with open(file_name,"w") as f:
         f.write(text)
     subprocess.Popen(["notepad.exe",file_name])
+
+def startJoke():
+    joke=get_joke()
+    return joke
