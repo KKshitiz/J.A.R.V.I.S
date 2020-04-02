@@ -5,9 +5,12 @@ from playsounds import startPlayAudio
 from text2speech import setupTts,startTts
 from speech2text import startStt
 sys.path.insert(1,'C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\utility')
+sys.path.insert(1,'C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\utility\\systemcontrols')
 from miscutils import *
-import sysutils
-import googlecalendar
+from sysutils import *
+from systemcontrol import *
+from wolfram import setupWolfram,startWolfram
+from googlecalendar import startCalendar,setupCalendar
 import random
 from playmusic import *
 
@@ -31,10 +34,12 @@ def randomize(l):
 def init():
 
     setupTts(250)
+    setupWolfram()
+    setupCalendar()
     startPlayAudio('jarvisworking.wav')
-    startTts(miscutils.greet())
-    startTts(miscutils.weather(CITY))
-    startTts(googlecalendar.startCalendar(2))
+    startTts(greet())
+    startTts(weather(CITY))
+    startTts(startCalendar(2))
     startTts("Call me again if you need me.")
 
 #initial startup sequence ends here
@@ -75,8 +80,48 @@ def matchCommand(CMD):
         startTts(randomize(joke_r))
         startTts(startJoke())
 
-    elif CMD in 
-    return
+    elif CMD in battery_i:
+        #checks battery status
+        startTts(getbattery())
+
+    elif CMD in ram_i:
+        #checks ram
+        startTts(getram())
+
+    elif CMD in cpu_i:
+        #checks cpu
+        startTts(randomize(cpu_r))
+        allcore=startStt()
+        if allcore in affirmative_i:
+            startTts(getcpuper(True))
+        else:
+            startTts(getcpuper(False))
+    
+    elif CMD in shutdown_i:
+        #shutdown
+        startTts(randomize(shutdown_r))
+        ans=startStt()
+        if ans in affirmative_i:
+            shutdown()
+
+    elif CMD in screenshot_i:
+        #capture screenshot
+        startTts(randomize(screenshot_r))
+        name=startStt()
+        if name in screenshot_i2:
+            takeScreenshot(str(random.randint(0,99999)))
+        else:
+            takeScreenshot(name)
+        startTts(randomize(screenshot_r2))
+
+    elif CMD in mute_i:
+        #mute
+        mute()
+
+    elif CMD in volumeup_i:
+        
+    
+
 #function ends here
 
 

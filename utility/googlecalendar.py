@@ -53,10 +53,13 @@ def get_events(n, service):
         print(e)
         return e
 
-try:
-    service = authenticate_google()
-except:
-    s="Authentication failed from google servers."
+def setupCalendar():
+    try:
+        global service
+        service = authenticate_google()
+    except:
+        global s
+        s="Authentication failed from google servers."
     
 def startCalendar(n):
     try:
@@ -66,4 +69,5 @@ def startCalendar(n):
     return s
 
 if __name__ == "__main__":
+    setupCalendar()
     startCalendar(2)

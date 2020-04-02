@@ -7,7 +7,7 @@ def getcpuper(percpu=False):
         cpu_say="The usages of cpu cores are "
         for x in cpu_percent(interval=1,percpu=percpu):
             cpu_say+=str(x)+", "
-        cpu_say+="respectively"
+        cpu_say+="gigahertz respectively"
     else:
         cpu_say="CPU usage is "+str(cpu_percent(interval=1,percpu=percpu))+" percent"
     print(cpu_say)

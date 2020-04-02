@@ -3,7 +3,7 @@ from cv2 import cvtColor,imwrite,COLOR_RGB2BGR
 from pyautogui import screenshot
 
 #path where you want to store screenshots
-path="C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\utility\\screenshots\\"
+path="C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\assets\\screenshots\\"
 
 def takeScreenshot(filename="image"):
     # take screenshot using pyautogui 

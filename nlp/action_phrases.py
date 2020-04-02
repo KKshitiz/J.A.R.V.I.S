@@ -41,7 +41,7 @@ shutdown_r=["are you sure ","system will shut down. do you want to continue ","a
 
 #to capture screenshot
 screenshot_i=["capture the screen","save the screen","capture it"]
-screenshot_r=["name ","what should be the name ","filename ","what should be the filename, sir ","what shall i name it  sir."]
+screenshot_r=["name ?","what should be the name ?","filename ?","what should be the filename, sir ?","what shall i name it  sir ?"]
 screenshot_i2=["anything you wish","you decide","decide yourself","i don't know","anything"]
 screenshot_r2=["capturing screen for reference","screen saved","stored it in my database"]
 
@@ -53,7 +53,7 @@ joke_r=["here we go","joke time","hear me carefully","hear out","here's a progra
 battery_i=["check battery health","check battery","battery status","power status","check battery status"]
 ram_i=["check virtual memory","ram usage","check ram usage","memory usage","check memory usage"]
 cpu_i=["check cpu usage","check cpu health","cpu usage"]
-cpu_r=["would you like to know usage for all cpu cores ","Sir, shall enumerate the usages of all the cores"]
+cpu_r=["would you like to know usage for all cpu cores ","Sir, shall I enumerate the usages of all the cores"]
 
 #to take notes
 notes_i=["make a note", "write this down", "remember this", "type this"]
@@ -64,3 +64,6 @@ notes_r2=["noted","i've made a note of it"]
 weather_i=["check weather","what's the weather","how's the sky"]
 weather_r=["which city would you like to check?"]
 #to exit jarvis
+
+#mute
+mute_i=["shut up","mute","sounds off"]
