@@ -46,11 +46,11 @@ screenshot_i2=["anything you wish","you decide","decide yourself","i don't know"
 screenshot_r2=["capturing screen for reference","screen saved","stored it in my database"]
 
 #joke commands
-joke_i=["tell me a joke","do you have a joke for me ","amuse me","make me laugh","i am feeling sad"]
+joke_i=["tell me a joke","do you have a joke for me","amuse me","make me laugh","i am feeling sad"]
 joke_r=["here we go","joke time","hear me carefully","hear out","here's a programmer joke for you"]
 
 #to check system status
-battery_i=["check battery health","check battery","battery status","power status","check battery status"]
+battery_i=["check battery health","check battery","battery status","power status","check battery status","check battery status"]
 ram_i=["check virtual memory","ram usage","check ram usage","memory usage","check memory usage"]
 cpu_i=["check cpu usage","check cpu health","cpu usage"]
 cpu_r=["would you like to know usage for all cpu cores ","Sir, shall I enumerate the usages of all the cores"]

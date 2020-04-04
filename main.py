@@ -9,13 +9,14 @@ sys.path.insert(1,'C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\utility\\sy
 from miscutils import *
 from sysutils import *
 from systemcontrol import *
+from screenshot import takeScreenshot
 from wolfram import setupWolfram,startWolfram
 from googlecalendar import startCalendar,setupCalendar
 import random
 from playmusic import *
 
 #some variables
-WAKE_CMD=wakeup
+WAKE_CMD="jarvis"
 CITY="gorakhpur"
 USERNAME="kshitiz"
 #some variables
@@ -72,7 +73,7 @@ def matchCommand(CMD):
     elif CMD in weather_i:
         #to check weather
         startTts(randomize(weather_r))
-        city=startTts()
+        city=startStt()
         startTts(weather(city))
 
     elif CMD in joke_i:
@@ -118,8 +119,8 @@ def matchCommand(CMD):
         #mute
         mute()
 
-    elif CMD in volumeup_i:
-        
+    # elif CMD in volumeup_i:
+
     
 
 #function ends here
@@ -137,8 +138,8 @@ def startMain():
     while True:
         wake=startStt()
         print(wake)
-        if wake in WAKE_CMD:
-            CMD=startStt()
+        if WAKE_CMD in wake:
+            CMD=wake.replace("jarvis","").strip()
             matchCommand(CMD)
             
 #main function ends here
