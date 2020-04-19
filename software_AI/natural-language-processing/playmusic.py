@@ -1,4 +1,4 @@
-from pygame import mixer  # Load the popular external library
+from pygame import mixer
 asset_path="C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\assets\\music\\"
 
 def startPlaymusic():

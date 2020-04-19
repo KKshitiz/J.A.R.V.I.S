@@ -3,17 +3,23 @@ Iron man inspired Personal virtual assistant
 
 ![jarvis](./assets/images/jarvis.jpg)
 
+### Vision:
+ To make an advanced personal voice assistant capable of 
+
 ### Background Readings:
 - [Is Iron Man jarvis still a fiction?]("https://medium.com/@froger_mcs/iron-mans-jarvis-is-it-still-a-fiction-972c337294de")
 - [Two Indian Men create Jarvis OS]("https://www.indianweb2.com/2014/07/28/two-indians-made-iron-mans-jarvis-ai-reality/")
 - [Mark Zunckerberg's blog on Jarvis]("https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10103347273888091/?pnref=story")
 - [An in-depth analysis of Jarvis by a professional]("https://www.linkedin.com/pulse/how-studying-ai-ruins-marvel-movies-you-tony-starks-jarvis-feroli/")
 
+### Inspiration:
+
+
 __NOTE:  _In the initial stage the project will be limited to the software part_.__
 Some points:
 - First goal would be to create a weak AI.<br>
 [Here's a quick read about Weak Vs Strong A.I.]("https://e3zine.com/strong-artificial-intelligence/")<br>
-- Although some of the features described below would seem overblown but they actually exists. The challenge here is to integrate the individual features and modules.
+- Although some of the features described below would seem overblown but they actually exists. The challenge here is to tweak it to our desired outcome and integrate the individual features and modules.
 <br>
 
 ### This project structure is proposed as follows:
@@ -113,6 +119,131 @@ _Use Python3 for development_
   * To do lists
   * Libraries and dependencies required
   * Any other metadata
+
+
+### Project directory structure
+
+```bash
+│   .gitignore
+│   install_requirements.sh
+│   LICENSE
+│   main.py
+│   README.md
+│   requirements.txt
+│   token.pickle
+│   _config.yml
+│
+├───assets
+│   │   README_assets.md
+│   │
+│   ├───images
+│   │       J.A.R.V.I.S..jpg
+│   │       jarvis.jpg
+│   │
+│   ├───music
+│   │       AC DC - BACK IN BLACK MUSIC WITH.mp3
+│   │       AC DC - Hard As A Rock (Official Video).mp3
+│   │       AC DC - Shoot To Thrill (Iron Man 2 Version).mp3
+│   │       AC DC - War Machine.mp3
+│   │       AC DC Highway to hell Letra.mp3
+│   │       ACDC-You-Shook-Me-All-Night-Long.mp3
+│   │       Another One Bites The Dust - Queen.mp3
+│   │       Metallica-Master Of Puppets.mp3
+│   │       T.N.T..mp3
+│   │       The Clash - Should I Stay Or Should I Go.mp3
+│   │       Warrant - Cherry Pie (with).mp3
+│   │
+│   ├───notes
+│   │       2020-04-01 14-41-15.199146-note.txt
+│   │       2020-04-02 13-37-21.929309-note.txt
+│   │
+│   ├───screenshots
+│   │       image.png
+│   │
+│   └───sounds
+│           end.wav
+│           jarvislistening.wav
+│           jarvisworking.wav
+│           start.wav
+│
+├───gui
+│       README_gui.md
+│
+├───hardware
+│       README_utility.md
+│
+├───software-bot
+│       README_bot.md
+│
+├───software_AI
+│   ├───computer-vision
+│   │       README_utility.md
+│   │
+│   └───natural-language-processing
+│       │   action_phrases.py
+│       │   conversational_phrases.txt
+│       │   playmusic.py
+│       │   playsounds.py
+│       │   README_nlp.md
+│       │   speech2text.py
+│       │   text2speech.py
+│       │
+│       └───__pycache__
+│               action_phrases.cpython-37.pyc
+│               playmusic.cpython-37.pyc
+│               playsounds.cpython-37.pyc
+│               speech2text.cpython-37.pyc
+│               text2speech.cpython-37.pyc
+│
+├───software_Non_AI
+└───utility
+    │   credentials.json
+    │   googlecalendar.py
+    │   miscutils.py
+    │   README_utility.md
+    │   screenshot.py
+    │   sysutils.py
+    │   translate.py
+    │   webbrowser_functions.py
+    │   wolfram.py
+    │
+    ├───systemcontrols
+    │   │   key.py
+    │   │   keyboard.py
+    │   │   systemcontrol.py
+    │   │   type.py
+    │   │
+    │   └───__pycache__
+    │           key.cpython-37.pyc
+    │           keyboard.cpython-37.pyc
+    │           sound.cpython-37.pyc
+    │           systemcontrol.cpython-37.pyc
+    │
+    └───__pycache__
+            googlecalendar.cpython-37.pyc
+            keyboard.cpython-37.pyc
+            miscutils.cpython-37.pyc
+            screenshot.cpython-37.pyc
+            sound.cpython-37.pyc
+            sysutils.cpython-37.pyc
+            wolfram.cpython-37.pyc
+```
+
+### How to update/regenerate the directory structure easily:
+  - navigate to the directory J.A.R.V.I.S
+  - issue the command tree /F in cmd/powershell
+  - or in terminal
+    - sudo apt install tree
+    - tree
+  - copy the result
+  - replace the existing structure inside the bash code container above
+
+### Related projects on JARVIS:
+  - Student Group called Hacker Labs create real Iron Man Helmet with working HUD using MS Hololens<br>
+    {% include youtubePlayer.html id="bxjBaqSbaZI" %}
+  - Hacksmith makes JARVIS Home Automation in real life
+    {% include youtubePlayer.html id="yUL4gDVR6MI" %}
+    
 
 <hr>
 
