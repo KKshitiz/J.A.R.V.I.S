@@ -43,7 +43,7 @@ Some points:
       - Computer Vision
         - Face Detection
         - Face REcognition
-        - Face Tracking
+        - Eye Tracking
         - Object detection
         - Visual question answering
         - Expression recognition
@@ -84,8 +84,15 @@ Some points:
         - Open up applications
         - ability to add coded responses using voice
 
+    - ##### Desktop GUI application
+      - alternative to voice controlled actions
+      - user login to change settings
+      - Futuristic animations
+      - monitor all the functions of jarvis
+      - manual control of jarvis features
+
     - ##### App based interaction module / Messenger Bot
-      -to indirectly communicates with the rest of the Hardware and Software components from anywhere
+      - to indirectly communicates with the rest of the Hardware and Software components from anywhere
 
 
 ### How to start working :

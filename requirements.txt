@@ -1,0 +1,14 @@
+pyaudio
+wave
+SpeechRecognition
+pyttsx3
+pyowm
+pyjokes
+datetime
+opencv-python
+pyautogui
+numpy
+psutil
+googletrans
+webbrowser
+wolframalpha

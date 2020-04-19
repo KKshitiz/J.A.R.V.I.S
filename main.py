@@ -22,16 +22,22 @@ USERNAME="kshitiz"
 #some variables
 
 
-
-#function to return random value from a list
-
+'''
+function to return random value from a list
+used in returning random responses from response list stored in action_phrases.py
+'''
 def randomize(l):
     return l[random.randint(0,len(l)-1)]
 
 
 
-#initial startup sequence starts
+'''
+initial startup sequence - runs when jarvis starts
+include anything and everything that jarvis might need during its execution and needs to be initialized once
+this will make jarvis smooth during execution and the api call time gets reduced significantly
 
+like : setting up connection for api calls
+'''
 def init():
 
     setupTts(250)
@@ -43,11 +49,12 @@ def init():
     startTts(startCalendar(2))
     startTts("Call me again if you need me.")
 
-#initial startup sequence ends here
 
 
+'''
+function to match commands
+'''
 
-#function to match commands
 def matchCommand(CMD):
 
     if CMD in check_i:
@@ -146,6 +153,6 @@ def startMain():
 
 
 
-#start jarvis by executing main fuction
+#ensures that jarvis starts when the file is executed by executing main fuction
 if __name__ == "__main__":
     startMain()
