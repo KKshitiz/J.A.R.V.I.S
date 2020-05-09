@@ -1,18 +1,31 @@
 from psutil import cpu_percent,sensors_battery,virtual_memory
-import os
 
+'''
+NOTE:
+this module works for windows, linux, macos and is considered complete
+if you want to add more hardware checking function first submit a PR
+'''
+
+
+'''
+returns a string containing cpu usage
+'''
 def getcpuper(percpu=False):
-    #returns a list consisting of usage % of all cpus
     if percpu:
         cpu_say="The usages of cpu cores are "
         for x in cpu_percent(interval=1,percpu=percpu):
             cpu_say+=str(x)+", "
-        cpu_say+="gigahertz respectively"
+        cpu_say+="percent respectively"
     else:
         cpu_say="CPU usage is "+str(cpu_percent(interval=1,percpu=percpu))+" percent"
     print(cpu_say)
     return cpu_say
 
+
+
+'''
+returns a string containing battery info
+'''
 def getbattery():
     battery_say=""
     battery=sensors_battery()
@@ -26,6 +39,11 @@ def getbattery():
     print(battery_say)
     return battery_say
     
+
+
+'''
+returns a string containing ram usage details
+'''
 def getram():
     ram_say="System memory usage is "
     memory=virtual_memory()
@@ -37,14 +55,3 @@ def getram():
     print(ram_say)
     return ram_say
 
-def shutdown():
-    os.system("shutdown /s /t 1")
-
-def restart():
-    os.system("shutdown /r /t 1")
-
-def shutdowntsec(t):
-    os.system("shutdown /s /t "+str(t))
-
-def restarttsec(t):
-    os.system("shutdown /r /t "+str(t))

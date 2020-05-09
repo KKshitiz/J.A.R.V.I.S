@@ -15,8 +15,8 @@ def startWolfram(question):
         return res
     except:
         print("Not found on Wolfram alpha")
-        return False
+        return None
 
 if __name__ == "__main__":
     setupWolfram()
-    startWolfram("What is your name?")
+    startWolfram("What is 2+3/4")

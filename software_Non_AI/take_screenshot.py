@@ -2,10 +2,11 @@ from numpy import array
 from cv2 import cvtColor,imwrite,COLOR_RGB2BGR
 from pyautogui import screenshot
 
-#path where you want to store screenshots
-path="C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\assets\\screenshots\\"
-
-def takeScreenshot(filename="image"):
+'''
+module to take screenshot and store it in png format
+NOTE: works for all systems
+'''
+def takeScreenshot(filename,path):
     # take screenshot using pyautogui 
     image = screenshot() 
     # since the pyautogui takes as a 
@@ -16,6 +17,3 @@ def takeScreenshot(filename="image"):
                         COLOR_RGB2BGR) 
     # writing it to the disk using opencv 
     imwrite(path+filename+".png", image) 
-
-if __name__ == "__main__":
-    takeScreenshot()

@@ -2,6 +2,7 @@ from __future__ import print_function
 import datetime
 import pickle
 import os.path
+import re
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -23,7 +24,7 @@ def authenticate_google():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'C:\\Users\\skili\\Documents\\GitHub\\J.A.R.V.I.S\\utility\\credentials.json', SCOPES)
+                'root_dir+\\credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
 
         with open('token.pickle', 'wb') as token:
@@ -44,12 +45,12 @@ def get_events(n, service):
     events = events_result.get('items', [])
 
     if not events:
-        e='No upcoming events found.'
+        e='You have no events scheduled today.'
         print(e)
         return e
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
-        e=start+ event['summary']
+        e="You have an event titled "+ event['summary']+" scheduled at "+re.findall('T([0-9][0-9]:[0-9][0-9]):[0-9][0-9]',start)[0]
         print(e)
         return e
 

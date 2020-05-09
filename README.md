@@ -45,6 +45,7 @@ Some points:
         - Face REcognition
         - Eye Tracking
         - Object detection
+        - Extracting text from images
         - Visual question answering
         - Expression recognition
         - Hand gesture recognition
