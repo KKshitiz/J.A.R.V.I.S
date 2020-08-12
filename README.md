@@ -1,10 +1,11 @@
 # J.A.R.V.I.S<br>
 Iron man inspired Personal virtual assistant
+[Website]("https://kkshitiz.github.io/J.A.R.V.I.S/")
 
 ![jarvis](./assets/images/jarvis.jpg)
 
 ### Vision:
- To make an advanced personal voice assistant capable of 
+ To make an advanced personal voice assistant capable of responding to user's voice and perform tasks accordingly.
 
 ### Background Readings:
 - [Is Iron Man jarvis still a fiction?]("https://medium.com/@froger_mcs/iron-mans-jarvis-is-it-still-a-fiction-972c337294de")
