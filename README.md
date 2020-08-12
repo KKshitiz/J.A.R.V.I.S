@@ -1,6 +1,6 @@
 # J.A.R.V.I.S<br>
-Iron man inspired Personal virtual assistant
-[Website]("https://kkshitiz.github.io/J.A.R.V.I.S/")
+Iron man inspired Personal virtual assistant<br>
+[Website](https://kkshitiz.github.io/J.A.R.V.I.S/)
 
 ![jarvis](./assets/images/jarvis.jpg)
 
